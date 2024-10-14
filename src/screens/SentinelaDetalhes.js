@@ -15,12 +15,13 @@ return(
            
               <Image source={sentinela.ultImg} style={styles.img}/>
            
-           
-            <Text style={styles.sentinela}>Nome do Sentinela: {sentinela.nome}  </Text>
-
              
             
-            <Text style={styles.ult}>Ult: {sentinela.ult}</Text>
+            <Text style={styles.sentinela}>Nome do Sentinela: {sentinela.nome}  </Text>
+
+             <Text style={styles.nacionalidade}>Nacionalidade: {sentinela.nacionalidade}</Text>
+            
+            <Text style={styles.ult}>Ultimate: {sentinela.ult}</Text>
            
             
             <Text style={styles.vantagem}>Vantagem: {sentinela.vantagem} </Text>
@@ -37,6 +38,15 @@ return(
  }
  const styles = StyleSheet.create({
   
+   nacionalidade:{
+ fontSize: 25,
+        color:"#fff",
+        alignSelf: 'center',
+  padding: 10,
+
+
+   },
+   
     img:{
         alignSelf: 'center',
         height:300,

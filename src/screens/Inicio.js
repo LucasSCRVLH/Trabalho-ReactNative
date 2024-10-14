@@ -20,7 +20,7 @@ export default function Inicio(){
         style={styles.button}
         onPress={() => navigation.navigate('Lista de Sentinelas')}
       >
-        <Text style={styles.buttonText}>Ir para lista de Sentinelas</Text>
+        <Text style={styles.buttonText}>Ir para a lista de Sentinelas</Text>
       </TouchableOpacity>
 
 
