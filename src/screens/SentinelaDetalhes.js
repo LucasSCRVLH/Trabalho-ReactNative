@@ -1,5 +1,5 @@
 import { useRoute } from '@react-navigation/native';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 
 
 
@@ -11,29 +11,85 @@ return(
 
     <View style={styles.caixa}>
 
-        <Text style={styles.nome}>Detalhes da ult do Sentinela</Text>
-        <Text style={styles.ult}></Text>
-            <Text>Nome do Sentinela: {sentinela.nome}  </Text>
-            <Text>Ult: {sentinela.ult}</Text>
-            <Text>Vantagem:{sentinela.vantagem} </Text>
-            <Text>fraqueza:{sentinela.fraqueza} </Text>
+        <Text style={styles.nome}>Detalhes:</Text>
+           
+              <Image source={sentinela.ultImg} style={styles.img}/>
+           
+           
+            <Text style={styles.sentinela}>Nome do Sentinela: {sentinela.nome}  </Text>
+
+             
+            
+            <Text style={styles.ult}>Ult: {sentinela.ult}</Text>
+           
+            
+            <Text style={styles.vantagem}>Vantagem: {sentinela.vantagem} </Text>
+           
+            
+            <Text style={styles.fraqueza}>Fraqueza: {sentinela.fraqueza} </Text>
+
     
+
     </View>
 );
     
 
  }
  const styles = StyleSheet.create({
-   nome:{
+  
+    img:{
+        alignSelf: 'center',
+        height:300,
+        width: "100%",
+
+        padding: 10,
+    },
 
 
+
+    nome:{
+
+        fontSize: 30,
+          color:"#fff",
+         padding: 10,
+            alignSelf: 'center'
 
     },
 
     ult:{
-
+        fontSize: 25,
+        color:"#fff",
+        alignSelf: 'center',
+  padding: 10,
     },
 
-    caixa:{},
+    caixa:{
+    
+    backgroundColor: "black",
+  
+       
+
+    },
+  
+   fraqueza:{
+    color:"#fff",
+    fontSize: 25,
+     alignSelf: 'center',
+  padding: 10,
+    },
+
+    vantagem:{
+        color:"#fff",
+        fontSize: 25,
+      alignSelf: 'center',
+  padding: 10,
+    },
+ sentinela:{
+        color:"#fff",
+        fontSize: 25,
+        alignSelf: 'center',
+  padding: 10,
+    },
+   
 
 });

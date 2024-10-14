@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 
@@ -13,7 +13,7 @@ style={styles.sentinela}>
 
     <Text style={styles.ult}>{sentinela.ult}</Text>
             <Text style={styles.nome}>{sentinela.nome}</Text>
-    
+            <Image source={sentinela.img} style={styles.img}/>
 
 
 </TouchableOpacity>
@@ -28,24 +28,34 @@ const styles = StyleSheet.create({
    nome: {
     color: "#fff",
     fontSize: 25,
+  
    },
    
    
     sentinela: {
         flexDirection: 'column',
-         marginHorizontal: 20,
+         marginHorizontal: 10,
         marginVertical: 10,
-        padding: 10,
         alignItems: 'center',
-        backgroundColor: 'black',
-
+        backgroundColor: '#1e1e1e',
+        borderRadius: 10,
+        padding: 16,
+        margin: 8,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        elevation: 5,
     },
     ult: {
         fontSize: 40,
-        marginRight: 15,
+      
         color: "#fff",
-    }
-   
+    },
+    img:{
+        width: 250,
+        height: 450,
+        alignSelf:"center",
+    },
   
 });
     
